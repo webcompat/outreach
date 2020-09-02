@@ -1,3 +1,7 @@
+:root {
+	font-size: 100%;
+}
+
 html, body {
 	position: relative;
 	width: 100%;
@@ -10,6 +14,25 @@ body {
 	padding: 8px;
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.4em;
+}
+
+@media screen and (min-width: 20em) {
+	body {
+		font-size: calc(1em + (1.3125 - 1) * ((100vw - 20em) / (80 - 20)));
+		line-height: calc(1.4em + (1.8 - 1.4) * ((100vw - 20em) / (80 - 20)));
+	}
+}
+
+@media (min-width: 80em) {
+	body {
+		font-size: 1.3125em;
+		line-height: 1.8em;
+	}
 }
 
 a {
@@ -31,7 +54,7 @@ label {
 
 input, button, select, textarea {
 	font-family: inherit;
-	font-size: inherit;
+	font-size: 0.8em;
 	padding: 0.4em;
 	margin: 0 0 0.5em 0;
 	box-sizing: border-box;

@@ -13,6 +13,12 @@ jobs:
       - run:
           name: Lint
           command: npm run lint
+      - run:
+          name: Run tests
+          command: npm run test
+      - run:
+          name: Run build
+          command: npm run build
 workflows:
   test-and-deploy:
     jobs:

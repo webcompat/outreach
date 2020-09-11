@@ -11,17 +11,17 @@
     cursor: pointer;
     margin-bottom: 16px;
     min-width: 140px;
-    padding: 0.6em 24px;
+    padding: .6em 24px;
   }
 
   button:hover {
-    opacity: 0.85;
+    opacity: .85;
   }
 
   button:disabled {
     color: var(--color-button-disabled);
     cursor: not-allowed;
-    opacity: 0.6;
+    opacity: .6;
   }
 </style>
 

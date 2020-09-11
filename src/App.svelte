@@ -5,9 +5,9 @@
 
 <style>
   .main {
-    width: 100%;
-    max-width: 1140px;
     margin: auto;
+    max-width: 1140px;
+    width: 100%;
   }
 </style>
 

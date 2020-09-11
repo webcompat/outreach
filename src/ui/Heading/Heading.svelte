@@ -27,7 +27,7 @@
   h1,
   h2,
   h3 {
-    margin: 0.5em 0;
+    margin: .5em 0;
   }
 </style>
 

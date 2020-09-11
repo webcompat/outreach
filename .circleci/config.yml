@@ -1,7 +1,27 @@
 version: 2.1
 orbs:
   heroku: circleci/heroku@0.0.10
+  node: circleci/node@4.0.0
+jobs:
+  lint-and-test:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
+      - run:
+          name: Lint
+          command: npm run lint
 workflows:
-  heroku_deploy:
+  test-and-deploy:
     jobs:
-      - heroku/deploy-via-git
+      - lint-and-test
+      - heroku/deploy-via-git:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - lint-and-test
+

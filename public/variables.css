@@ -1,0 +1,7 @@
+:root {
+  --color-first: rgba(255, 201, 0, 1); /* #ffc900 */
+  --color-input-border: rgba(0, 0, 0, .4); /* #000000 40% transparency */
+  --color-input-focus: rgba(86, 99, 140, 1); /* #56638c */
+  --color-button-disabled: #000;
+  --color-input-placeholder: rgba(64, 64, 64, .5); /* #404040 */
+}

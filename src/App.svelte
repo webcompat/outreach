@@ -1,11 +1,17 @@
 <script>
-  export let name;
+  import EnterIssue from "./components/EnterIssue.svelte";
+  import Previewer from "./components/Previewer.svelte";
 </script>
 
 <style>
-  h1 {
-    color: purple;
+  .main {
+    margin: auto;
+    max-width: 1140px;
+    width: 100%;
   }
 </style>
 
-<h1>Hello {name}!</h1>
+<div class="main">
+  <EnterIssue />
+  <Previewer />
+</div>

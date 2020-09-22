@@ -1,4 +1,6 @@
 <script>
+  import Label from "../Label/Label.svelte";
+
   export let val = "";
   export let name = "";
   export let type = "text";
@@ -11,14 +13,8 @@
     margin-bottom: 16px;
   }
 
-  .input-label {
-    display: inline-block;
-    font-size: .8em;
-    margin-bottom: 2px;
-  }
-
   input {
-    border: 1px solid var(--color-input-border);
+    border: 1px solid var(--color-black-40);
     border-radius: 2px;
     display: block;
     padding: 8px 24px 8px 8px;
@@ -29,18 +25,17 @@
   }
 
   input::placeholder {
-    color: var(--color-input-placeholder);
+    color: var(--color-dark-gray);
   }
 
   input:focus {
-    box-shadow: 0 0 0 2px var(--color-input-focus);
+    box-shadow: 0 0 0 2px var(--color-desaturated-dark-blue);
     outline: 1px solid transparent;
   }
 </style>
 
 <div class="input-wrapper">
-  <label for={name}>
-    <span class="input-label"> {label} </span>
+  <Label {name} {label}>
     <input value={val} {name} {type} {placeholder} on:input />
-  </label>
+  </Label>
 </div>

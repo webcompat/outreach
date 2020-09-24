@@ -1,29 +1,57 @@
 <script>
-  import { getIssues } from "../helpers/oktokit";
+  import filterXSS from "xss";
+  import { getIssueById } from "../helpers/oktokit";
   import Button from "../ui/Button/Button.svelte";
   import TextField from "../ui/TextField/TextField.svelte";
   import Heading from "../ui/Heading/Heading.svelte";
+  import IssueDetails from "./IssueDetails.svelte";
 
+  export let onIssueReady;
+
+  let promise;
+  let loading = false;
   let issueId;
-  let promise = Promise.resolve("");
 
-  async function fetchIssues() {
-    const res = await getIssues(issueId);
+  const onError = (response) => {
+    loading = false;
+    throw new Error(
+      `There has been an error with your request: ${response.message}`
+    );
+  };
+
+  const getIssueData = (response) => {
+    const { title, number, body } = response.data;
+    return {
+      title,
+      number,
+      body,
+    };
+  };
+
+  const fetchIssue = async () => {
+    const res = await getIssueById(issueId).catch(onError);
+
+    loading = false;
+
     if (res && res.status === 200) {
-      return res.data.title;
-    } else {
-      throw new Error(res);
+      const issue = getIssueData(res);
+      onIssueReady(issue);
+      return issue;
     }
-  }
+  };
 
-  function handleClick() {
-    if (!issueId) return;
-    promise = fetchIssues();
-  }
+  const handleClick = () => {
+    const sanitizedId = filterXSS(issueId);
 
-  function onChange({ target }) {
+    if (!sanitizedId || !isFinite(sanitizedId)) return;
+
+    loading = true;
+    promise = fetchIssue();
+  };
+
+  const onChange = ({ target }) => {
     issueId = target.value;
-  }
+  };
 </script>
 
 <style>
@@ -47,16 +75,17 @@
 
   <Button
     on:click={handleClick}
-    disabled={!issueId}
+    disabled={!issueId || loading}
     label="Explore templates" />
-
-  <div>
-    {#await promise}
-      Loading...
-    {:then title}
-      {title}
-    {:catch error}
-      {error.message}
-    {/await}
-  </div>
+</div>
+<div>
+  {#await promise}
+    Loading...
+  {:then issue}
+    {#if issue}
+      <IssueDetails {issue} />
+    {/if}
+  {:catch error}
+    {error.message}
+  {/await}
 </div>

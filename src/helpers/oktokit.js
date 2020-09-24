@@ -4,7 +4,7 @@ const octokit = new Octokit({
   baseUrl: "https://api.github.com",
 });
 
-export const getIssues = (issueId) =>
+export const getIssueById = (issueId) =>
   octokit.issues.get({
     owner: "webcompat",
     repo: "web-bugs",

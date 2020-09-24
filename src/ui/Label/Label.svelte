@@ -10,7 +10,11 @@
   }
 </style>
 
-<label for={name}>
-  <span class="input-label"> {label} </span>
-  <slot></slot>
-</label>
+{#if label}
+  <label for={name}>
+    <span class="input-label"> {label} </span>
+    <slot />
+  </label>
+{:else}
+  <slot />
+{/if}

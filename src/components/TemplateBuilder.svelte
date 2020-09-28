@@ -5,11 +5,15 @@
 
   export let issue;
 
-  let selectedLanguage = "english";
-  let selectedTemplate = "email";
+  const LANG = "english";
+  const TPL = "email";
+
+  let selectedLanguage = LANG;
+  let selectedTemplate = TPL;
 
   const onLanguageSelect = (value) => {
     selectedLanguage = value;
+    selectedTemplate = TPL;
   };
 
   const onTemplateSelect = (value) => {

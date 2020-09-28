@@ -20,11 +20,12 @@
   };
 
   const getIssueData = (response) => {
-    const { title, number, body } = response.data;
+    const { title, number, body, html_url } = response.data;
     return {
       title,
       number,
       body,
+      html_url,
     };
   };
 

@@ -5,7 +5,7 @@
 
 <style>
   button {
-    background-color: var(--color-first);
+    background-color: var(--color-pure-yellow);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -19,7 +19,7 @@
   }
 
   button:disabled {
-    color: var(--color-button-disabled);
+    color: var(--color-black);
     cursor: not-allowed;
     opacity: .6;
   }

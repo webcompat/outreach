@@ -31,7 +31,8 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "@octokit/rest": "^18.0.4"
+    "@octokit/rest": "^18.0.4",
+    "xss": "^1.0.8"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",

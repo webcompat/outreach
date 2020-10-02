@@ -1,6 +1,12 @@
 <script>
   import EnterIssue from "./components/EnterIssue.svelte";
-  import Previewer from "./components/Previewer.svelte";
+  import TemplateBuilder from "./components/TemplateBuilder.svelte";
+
+  let issue;
+
+  const onIssueReady = (issueData) => {
+    issue = { ...issueData };
+  };
 </script>
 
 <style>
@@ -12,6 +18,6 @@
 </style>
 
 <div class="main">
-  <EnterIssue />
-  <Previewer />
+  <EnterIssue {onIssueReady} />
+  <TemplateBuilder {issue} />
 </div>

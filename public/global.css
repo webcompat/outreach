@@ -54,32 +54,7 @@ input,
 button,
 select,
 textarea {
-  border: 1px solid #ccc;
-  border-radius: 2px;
   box-sizing: border-box;
   font-family: inherit;
   font-size: .8em;
-  margin: 0 0 .5em 0;
-  padding: .4em;
-}
-
-input:disabled {
-  color: #ccc;
-}
-
-input[type = "range"] {
-  height: 0;
-}
-
-button {
-  background-color: #f4f4f4;
-  outline: none;
-}
-
-button:active {
-  background-color: #ddd;
-}
-
-button:focus {
-  border-color: #666;
 }

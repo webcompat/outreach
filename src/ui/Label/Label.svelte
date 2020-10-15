@@ -6,7 +6,7 @@
 <style>
   .input-label {
     display: inline-block;
-    font-size: .7em;
+    font-size: 0.7em;
   }
 </style>
 

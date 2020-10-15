@@ -19,7 +19,7 @@
     display: block;
     padding: 8px 24px 8px 8px;
     position: relative;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
     width: 100%;
     z-index: 2;
   }

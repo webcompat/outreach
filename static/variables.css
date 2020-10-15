@@ -1,8 +1,8 @@
 :root {
   --color-pure-yellow: rgba(255, 201, 0, 1); /* #ffc900 */
   --color-black: rgba(0, 0, 0, 1); /* #000000 */
-  --color-black-40: rgba(0, 0, 0, .4); /* #000000 40% transparency */
-  --color-dark-gray: rgba(64, 64, 64, .5); /* #404040 */
+  --color-black-40: rgba(0, 0, 0, 0.4); /* #000000 40% transparency */
+  --color-dark-gray: rgba(64, 64, 64, 0.5); /* #404040 */
   --color-light-gray: rgba(204, 204, 204, 1); /* #CCCCCC */
   --color-desaturated-dark-blue: rgba(86, 99, 140, 1); /* #56638c */
   --color-light-blue: rgba(244, 245, 250, 1) /* #f4f5fa */

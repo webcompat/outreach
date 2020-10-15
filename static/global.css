@@ -35,11 +35,10 @@ body {
 
 a {
   color: rgb(0, 100, 200);
-  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:visited {
@@ -56,5 +55,5 @@ select,
 textarea {
   box-sizing: border-box;
   font-family: inherit;
-  font-size: .8em;
+  font-size: 0.8em;
 }

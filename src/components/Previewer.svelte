@@ -20,10 +20,11 @@
 <style>
   .previewer {
     background-color: var(--color-light-blue);
-    font-size: .8em;
+    font-size: 0.8em;
     line-height: 1.8em;
     margin: 32px 0;
     padding: 16px 32px;
+    word-break: break-word;
   }
 </style>
 

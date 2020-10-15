@@ -1,6 +1,9 @@
 <script>
   import { languages } from "../templates";
   import { buildBugUrl, buildSiteUrl } from "../helpers/utils";
+  import CopyTemplate from "./CopyTemplate.svelte";
+
+  const targetElementId = "previewer";
 
   export let selectedLanguage;
   export let selectedTemplate;
@@ -28,8 +31,9 @@
   }
 </style>
 
-<div class="previewer">
+<div class="previewer" id={targetElementId}>
   {#if tpl.isComponent}
     <svelte:component this={tpl.template} url={websiteUrl} {bugUrl} />
   {:else}{tpl.template}{/if}
 </div>
+<CopyTemplate {targetElementId} />

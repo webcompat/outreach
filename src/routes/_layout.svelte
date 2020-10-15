@@ -6,7 +6,7 @@
   main {
     margin: auto;
     max-width: 1140px;
-    width: 100%;
+    padding: 16px;
   }
 </style>
 

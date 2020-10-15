@@ -1,6 +1,7 @@
 <script>
   export let label = "";
   export let disabled = false;
+  export let id;
 </script>
 
 <style>
@@ -25,4 +26,4 @@
   }
 </style>
 
-<button on:click {disabled}> {label} </button>
+<button on:click {disabled} {id}> {label} </button>

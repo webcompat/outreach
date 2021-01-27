@@ -6,6 +6,7 @@
   import Heading from "../ui/Heading/Heading.svelte";
 
   let issueId;
+  console.log('test');
 
   const handleClick = () => {
     const sanitizedId = filterXSS(issueId);

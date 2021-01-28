@@ -19,21 +19,14 @@ jobs:
       - run:
           name: Run build
           command: npm run build
-  deploy-production:
-    executor: heroku/default
-    steps:
-      - checkout
-      - heroku/deploy-via-git:
-          force: true
 workflows:
   test-and-deploy:
     jobs:
       - lint-and-test
-      - deploy-production:
+      - heroku/deploy-via-git:
           filters:
             branches:
               only:
                 - master
           requires:
             - lint-and-test
-

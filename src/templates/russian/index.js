@@ -8,11 +8,6 @@ export const russian = {
       template: email,
       isComponent: true,
     },
-    linkedin: {
-      label: "LinkedIn",
-      value: "linkedin",
-      template: "LinkedIn template",
-    },
   },
   label: "Русский",
   value: "russian",

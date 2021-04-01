@@ -8,16 +8,6 @@ export const english = {
       template: email,
       isComponent: true,
     },
-    twitter: {
-      label: "Twitter",
-      value: "twitter",
-      template: "hi...",
-    },
-    linkedin: {
-      label: "LinkedIn",
-      value: "linkedin",
-      template: "LinkedIn template",
-    },
   },
   label: "English",
   value: "english",
